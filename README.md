@@ -17,6 +17,7 @@ PHP Travels
 # Running the tests
 Test can be run from testing.xml file.
 Run this file as TestNG suite and it will automate flight search functionality to test end to end functionality.
+Test data is provided from properties file located under Resources package.
 
 # Built With
 •	Maven - Dependency Management
