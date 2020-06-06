@@ -34,10 +34,10 @@ public class FlightSearch extends base {
 	@FindBy(xpath = "//input[@id='FlightsDateStart']")
 	public WebElement departDate;
 
-	@FindBy(xpath = "//div[@class='datepicker -bottom-left- -from-bottom- active']//div[@class='datepicker--cell datepicker--cell-day -current-'][contains(text(),'5')]")
+	@FindBy(css = "body.with-waypoint-sticky:nth-child(2) div.datepickers-container:nth-child(9) div.datepicker.-bottom-left-.-from-bottom-:nth-child(8) div.datepicker--content div.datepicker--days.datepicker--body.active div.datepicker--cells.datepicker--cells-days > div.datepicker--cell.datepicker--cell-day.-weekend-.-current-")
 	public WebElement todaysDate;
 
-	@FindBy(xpath = "//div[@class='datepicker -bottom-left- -from-bottom- active']//div[@class='datepicker--cell datepicker--cell-day -current-'][contains(text(),'5')]//following::div[1]")
+	@FindBy(css = "body.with-waypoint-sticky:nth-child(2) div.datepickers-container:nth-child(9) div.datepicker.-bottom-left-.-from-bottom-:nth-child(9) div.datepicker--content div.datepicker--days.datepicker--body.active div.datepicker--cells.datepicker--cells-days > div.datepicker--cell.datepicker--cell-day.-weekend-.-current-+div")
 	public WebElement tomorrowsDate;
 
 	@FindBy(xpath = "//input[@id='FlightsDateEnd']")
@@ -54,15 +54,19 @@ public class FlightSearch extends base {
 
 	@FindBy(xpath = "//div[@class='col-xs-12 col-md-12']//button[contains(text(),'Search')]")
 	public WebElement searchBtn;
+	
+	@FindBy(xpath = "//p[contains(text(),'0 Total listings found')]")
+	public WebElement verifyFlightList;
 
+	
 	// Dropdown for travel type
 	public void selectTravelType(String ElementName) throws InterruptedException {
 		travelTypeDrodwn.click();
 		Thread.sleep(2000);
 		List<WebElement> DropdownList = driver.findElements(By.xpath("//ul[@class='chosen-results']//li"));
-		System.out.println(DropdownList.size());
+		//System.out.println(DropdownList.size());
 		for (int i = 0; i < DropdownList.size(); i++) {
-			System.out.println(DropdownList.get(i).getText());
+			//System.out.println(DropdownList.get(i).getText());
 			if (DropdownList.get(i).getText().equals(ElementName)) {
 				DropdownList.get(i).click();
 				break;
@@ -106,5 +110,14 @@ public class FlightSearch extends base {
 
 	public void searchFlightsAvailable() {
 		searchBtn.click();
+	}
+
+	public void verifySearchResults() {
+		if(verifyFlightList.isDisplayed()) {
+			System.out.println("No flights available");
+		}else {
+			System.out.println("Available flights are displayed");
+		}
+		
 	}
 }

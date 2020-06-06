@@ -25,22 +25,25 @@ public class FlightSearchTest extends base {
 		flight.flightTab.click();
 
 		// Click on RoundTrip button if not selected
-		if (!flight.roundTripBtn.isSelected()) {
+		if (!flight.roundTripBtn.isSelected
+				()) {
 			flight.roundTripBtn.click();
 		}
 
 		// Select "Business" from dropdown
-		flight.selectTravelType("Business");
+		flight.selectTravelType(prop.getProperty("travelClass"));
 		//Select source city
-		flight.selectSourceCity("Bangalore");
+		flight.selectSourceCity(prop.getProperty("sourceCity"));
 		//select destination city
-		flight.selectDestinationCity("Pune");
+		flight.selectDestinationCity(prop.getProperty("destinationCity"));
 		//select travel dates (source-Today destination-Tomorrow selected for demo)
 		flight.selectTraveldates();
 		//select persons categories
 		flight.selectPersonCategories();
 		//click on search button and begin searching for flights available
 		flight.searchFlightsAvailable();
+		//verify if flight list is displayed or not
+		flight.verifySearchResults();
 	}
 
 	@AfterTest
