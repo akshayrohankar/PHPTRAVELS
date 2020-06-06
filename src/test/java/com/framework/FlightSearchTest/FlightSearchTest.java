@@ -1,5 +1,6 @@
 package com.framework.FlightSearchTest;
 
+import org.testng.annotations.Test;
 import java.io.IOException;
 
 import org.testng.annotations.AfterTest;
@@ -18,7 +19,7 @@ public class FlightSearchTest extends base {
 	}
 
 	@Test
-	public void searchBusinessFlightTest() throws InterruptedException {
+	public void searchFlightFunctionalityTest() throws InterruptedException {
 
 		// Navigate to Flight Tab
 		FlightSearch flight = new FlightSearch();
