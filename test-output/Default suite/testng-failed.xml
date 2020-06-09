@@ -5,7 +5,7 @@
     <classes>
       <class name="com.framework.FlightSearchTest.FlightSearchTest">
         <methods>
-          <include name="searchBusinessFlightTest"/>
+          <include name="searchFlightFunctionalityTest"/>
           <include name="initialize"/>
           <include name="teardown"/>
         </methods>

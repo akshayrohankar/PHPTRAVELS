@@ -1,6 +1,5 @@
 package com.framework.FlightSearchTest;
 
-import org.testng.annotations.Test;
 import java.io.IOException;
 
 import org.testng.annotations.AfterTest;
@@ -26,24 +25,23 @@ public class FlightSearchTest extends base {
 		flight.flightTab.click();
 
 		// Click on RoundTrip button if not selected
-		if (!flight.roundTripBtn.isSelected
-				()) {
+		if (!flight.roundTripBtn.isSelected()) {
 			flight.roundTripBtn.click();
 		}
 
 		// Select "Business" from dropdown
 		flight.selectTravelType(prop.getProperty("travelClass"));
-		//Select source city
+		// Select source city
 		flight.selectSourceCity(prop.getProperty("sourceCity"));
-		//select destination city
+		// select destination city
 		flight.selectDestinationCity(prop.getProperty("destinationCity"));
-		//select travel dates (source-Today destination-Tomorrow selected for demo)
+		// select travel dates (source-Today destination-Tomorrow selected for demo)
 		flight.selectTraveldates();
-		//select persons categories
+		// select persons categories
 		flight.selectPersonCategories();
-		//click on search button and begin searching for flights available
+		// click on search button and begin searching for flights available
 		flight.searchFlightsAvailable();
-		//verify if flight list is displayed or not
+		// verify if flight list is displayed or not
 		flight.verifySearchResults();
 	}
 
