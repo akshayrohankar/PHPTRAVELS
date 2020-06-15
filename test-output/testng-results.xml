@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36755" started-at="2020-06-09T23:59:57 IST" finished-at="2020-06-10T00:00:33 IST">
+  <suite name="Suite" duration-ms="37438" started-at="2020-06-15T13:45:32 IST" finished-at="2020-06-15T13:46:09 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36755" started-at="2020-06-09T23:59:57 IST" finished-at="2020-06-10T00:00:33 IST">
+    <test name="Flight Search Test" duration-ms="37438" started-at="2020-06-15T13:45:32 IST" finished-at="2020-06-15T13:46:09 IST">
       <class name="com.framework.FlightSearchTest.FlightSearchTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.framework.FlightSearchTest.FlightSearchTest@3439f68d]" name="initialize" is-config="true" duration-ms="11489" started-at="2020-06-09T23:59:57 IST" finished-at="2020-06-10T00:00:08 IST">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.framework.FlightSearchTest.FlightSearchTest@3439f68d]" name="initialize" is-config="true" duration-ms="10983" started-at="2020-06-15T13:45:32 IST" finished-at="2020-06-15T13:45:43 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="searchFlightFunctionalityTest()[pri:0, instance:com.framework.FlightSearchTest.FlightSearchTest@3439f68d]" name="searchFlightFunctionalityTest" duration-ms="24174" started-at="2020-06-10T00:00:08 IST" finished-at="2020-06-10T00:00:32 IST">
+        <test-method status="PASS" signature="searchFlightFunctionalityTest()[pri:0, instance:com.framework.FlightSearchTest.FlightSearchTest@3439f68d]" name="searchFlightFunctionalityTest" duration-ms="25186" started-at="2020-06-15T13:45:43 IST" finished-at="2020-06-15T13:46:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchFlightFunctionalityTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.FlightSearchTest.FlightSearchTest@3439f68d]" name="teardown" is-config="true" duration-ms="1033" started-at="2020-06-10T00:00:32 IST" finished-at="2020-06-10T00:00:33 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.FlightSearchTest.FlightSearchTest@3439f68d]" name="teardown" is-config="true" duration-ms="1190" started-at="2020-06-15T13:46:08 IST" finished-at="2020-06-15T13:46:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.framework.FlightSearchTest.FlightSearchTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Flight Search Test -->
+  </suite> <!-- Suite -->
 </testng-results>

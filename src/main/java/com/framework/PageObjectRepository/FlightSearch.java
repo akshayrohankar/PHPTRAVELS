@@ -34,10 +34,10 @@ public class FlightSearch extends base {
 	@FindBy(xpath = "//input[@id='FlightsDateStart']")
 	public WebElement departDate;
 
-	@FindBy(xpath = "//div[8]//div[1]//div[1]//div[2]//div[17]")
+	@FindBy(xpath = "//div[8]//div[1]//div[1]//div[2]//div[25]")
 	public WebElement todaysDate;
 
-	@FindBy(xpath = "//div[9]//div[1]//div[1]//div[2]//div[19]")
+	@FindBy(xpath = "//div[9]//div[1]//div[1]//div[2]//div[27]")
 	public WebElement tomorrowsDate;
 
 	@FindBy(xpath = "//input[@id='FlightsDateEnd']")
